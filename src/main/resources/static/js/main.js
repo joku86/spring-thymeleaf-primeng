@@ -108,26 +108,26 @@ $(function() {
               }
           });
       },
-            cellEdit: t
-            	
-//            	function(event, ui) {
-//            	t();
-////                $('#messages').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
+      cellEdit: function(event, ui) {
+    	  console.log("succes ");
+          $('#messages').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
+      }
+        });
+
+        $('#messages').puigrowl();
+//        var t=$.ajax({
+//            type: "GET",
+//            url: 'save',
+//            dataType: "json",
+//            context: this,
+//            success: function(response) {
+//            	console.log("succes "+response);
+//                 
+//            },
+//            done:function(msg) {
+//            	console.log("dome "+msg);
+//                 
 //            }
-        });
-        var t=$.ajax({
-            type: "GET",
-            url: 'save',
-            dataType: "json",
-            context: this,
-            success: function(response) {
-            	console.log("succes "+response);
-                 
-            },
-            done:function(msg) {
-            	console.log("dome "+msg);
-                 
-            }
-        });
+//        });
 });
          
