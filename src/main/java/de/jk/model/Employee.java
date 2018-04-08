@@ -1,11 +1,21 @@
 package de.jk.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
 	public Employee(String name, String vorname) {
 		super();
 		this.name = name;
 		this.vorname = vorname;
 	}
+	  @Id
+	    @GeneratedValue(strategy=GenerationType.AUTO)
+	    private Integer id;
+
 	private String name;
 	private String vorname;
 	private String a;

@@ -30,47 +30,38 @@
 //			]
 //	 })
 //});
-
+$(function ()  
+{  
+    var x = "Self-Invoking Function";
+    let d="df";
+    
+    console.log(x+ d);
+}); 
 $(function() {
-       
-//        $('#tbl').puidatatable({
-//            caption: 'Remote Restful Webservice - Eager',
-//            editMode: 'cell',
-//            paginator: {
-//                rows: 10
-//            },
-//  
-//            columns: [
-//                {field: 'name', headerText: 'Name'},
-//                {field: 'vorname', headerText: 'Vorname'},
-//                {field: 'a', headerText: 'a-überschrift'},
-//                {field: 'b', headerText: 'b'}
-//            ],
-//            datasource: function(callback) {
-//                $.ajax({
-//                    type: "GET",
-//                    url: 'employee',
-//                    dataType: "json",
-//                    context: this,
-//                    success: function(response) {
-//                        callback.call(this, response);
-//                    }
-//                });
-//            },
-//            cellEdit: function(event, ui) {
-////            	$.ajax({
-////                    type: "GET",
-////                    url: 'save',
-////                    dataType: "json",
-////                    context: this,
-////                    success: function(response) {
-////                    	console.log("sdf");
-//////                        callback.call(this, response);
-////                    }
-////                });
-////                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
-//            }
-//        });
+	console.log("ddddd");
+//	 MyFunctions = {  
+//		        Sum: function (x, y)  
+//		        {  
+//		            return x + y;  
+//		        },  
+//		        Sub: function (x, y)  
+//		        {  
+//		            return x - y;  
+//		        },  
+//		        Div: function (x, y)  
+//		        {  
+//		            return x / y;  
+//		        },  
+//		        Mul: function (x, y)  
+//		        {  
+//		            return x * y;  
+//		        }  
+//		    }  
+//		    var a = 20;  
+//		    var b = 10;  
+//		    alert("Value is 20 and 10 \n" + "Sum of Both value is is= " + MyFunctions.Sum(a, b) + "\n Subtraction of Both value is is= " + MyFunctions.Sub(a, b) + "\n Multiplication of Both value is is= " + MyFunctions.Mul(a, b) + "\n Divison of Both value is is= " + MyFunctions.Div(a, b))  
+
+ 
  
         var localData = [
             {'brand': 'Volkswagen', 'year': 2012, 'color': 'White', 'vin': 'dsad231ff'},
@@ -86,11 +77,14 @@ $(function() {
         ];
          
         $('#tbl ').puidatatable({
+        	
+        	 lazy: true,
             caption: 'Editable Cells',
             editMode: 'cell',
-          paginator: {
-          rows: 10
-      },
+            paginator: {
+                rows: 10,
+                totalRecords: totalArticles ,
+            },
             columns: [
                 {field: 'name', headerText: 'Vin', editor: 'input'},
                 {field: 'vorname', headerText: 'Brand', editor: 'input'},
@@ -98,8 +92,11 @@ $(function() {
                 {field: 'b', headerText: 'Color', editor: 'input'}
             ],
           datasource: function(callback) {
+        	  
           $.ajax({
-              type: "GET",
+      		data: '{"command":"on"}',
+          
+              type: "POST",
               url: 'employee',
               dataType: "json",
               context: this,
@@ -108,26 +105,38 @@ $(function() {
               }
           });
       },
-      cellEdit: function(event, ui) {
-    	  console.log("succes ");
-          $('#messages').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
-      }
+      cellEdit:  function(event, ui) {
+      	  if(ui.oldValue!=ui.newValue)
+          	  SendAjaxJsonRequest();
+          	  console.log(event+"succes ");
+                $('#default').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
+            }
         });
+       var mein= 
+        function(event, ui) {
+      	  if(ui.oldValue!=ui.newValue)
+      	  SendAjaxJsonRequest();
+      	  console.log(event+"succes ");
+            $('#default').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
+        }
 
-        $('#messages').puigrowl();
-//        var t=$.ajax({
-//            type: "GET",
-//            url: 'save',
-//            dataType: "json",
-//            context: this,
-//            success: function(response) {
-//            	console.log("succes "+response);
-//                 
-//            },
-//            done:function(msg) {
-//            	console.log("dome "+msg);
-//                 
-//            }
-//        });
+        $('#default').puigrowl();
+        function daten(){
+        	 
+        	$.ajax({
+        		
+
+                type: "GET",
+                url: 'save',
+                dataType: "json",
+                context: this,
+              
+            }).done(function(msg) {
+            	console.log("dome "+msg);
+                
+            });
+        } 
+            
+       
 });
          
