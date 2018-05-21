@@ -88,8 +88,8 @@ $(function() {
             columns: [
                 {field: 'name', headerText: 'Vin', editor: 'input'},
                 {field: 'vorname', headerText: 'Brand', editor: 'input'},
-                {field: 'a', headerText: 'Year', editor: 'input'},
-                {field: 'b', headerText: 'Color', editor: 'input'}
+                {field: 'birthday', headerText: 'Year', editor: 'input'},
+                {field: 'id', headerText: 'Color', editor: 'input'}
             ],
           datasource: function(callback) {
         	  
@@ -107,7 +107,7 @@ $(function() {
       },
       cellEdit:  function(event, ui) {
       	  if(ui.oldValue!=ui.newValue)
-          	  SendAjaxJsonRequest();
+          	  SendAjaxJsonRequest(ui.data);
           	  console.log(event+"succes ");
                 $('#default').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
             }

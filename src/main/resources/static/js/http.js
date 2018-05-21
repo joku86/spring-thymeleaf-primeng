@@ -1,8 +1,9 @@
- function SendAjaxJsonRequest(url, method, jsonObject)
+ function SendAjaxJsonRequest( jsonObject)
         {
             $.ajax({
-                type: "GET",
+                type: "POST",
                 url: "save",
+                data:jsonObject,
                  
                 success: onSuccess
             });
