@@ -1,12 +1,15 @@
- function SendAjaxJsonRequest( jsonObject)
+ function SendAjaxJsonRequest(e, jsonObject)
         {
-            $.ajax({
-                type: "POST",
-                url: "save",
-                data:jsonObject,
-                 
-                success: onSuccess
-            });
+	 
+	  e.preventDefault();
+	    e.stopPropagation();
+	    $.ajax({
+            type: "POST",
+            contentType : 'application/json; charset=utf-8',
+            url: "/save",
+            data: JSON.stringify(jsonObject)
+        });
+	  
         }
 
         /**
@@ -16,7 +19,7 @@
         {
             // Das empfangene Objekt wird wieder zum Objekt geparst
             
-console.log("hhhh h "+content);
+console.log("erfolgrecih"+content);
             
         }
        

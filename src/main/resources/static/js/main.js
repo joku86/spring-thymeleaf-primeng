@@ -107,8 +107,8 @@ $(function() {
       },
       cellEdit:  function(event, ui) {
       	  if(ui.oldValue!=ui.newValue)
-          	  SendAjaxJsonRequest(ui.data);
-          	  console.log(event+"succes ");
+          	  SendAjaxJsonRequest(event,ui.data);
+          	  console.log("gesendet "+ui);
                 $('#default').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
             }
         });
