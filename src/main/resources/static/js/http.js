@@ -1,25 +1,25 @@
- function SendAjaxJsonRequest(e, jsonObject)
-        {
-	 
-	  e.preventDefault();
-	    e.stopPropagation();
-	    $.ajax({
-            type: "POST",
-            contentType : 'application/json; charset=utf-8',
-            url: "/save",
-            data: JSON.stringify(jsonObject)
-        });
-	  
-        }
+function SendAjaxJsonRequest(e, jsonObject, fn) {
 
-        /**
-         * AJAX-Response auswerten
-         */
-        function onSuccess(content)
-        {
-            // Das empfangene Objekt wird wieder zum Objekt geparst
-            
-console.log("erfolgrecih"+content);
-            
-        }
-       
+	$.ajax({
+		type : "POST",
+		contentType : 'application/json; charset=utf-8',
+		async : false,
+		url : "/save",
+		data : JSON.stringify(jsonObject),
+		success : function(result) {
+			console.log("erfolgrecih" + result);
+		},
+		error : fn
+	});
+
+}
+
+/**
+ * AJAX-Response auswerten
+ */
+function onSuccess(content) {
+	// Das empfangene Objekt wird wieder zum Objekt geparst
+
+	console.log("erfolgrecih" + content);
+
+}

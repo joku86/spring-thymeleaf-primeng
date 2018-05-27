@@ -29,14 +29,14 @@ private UserRepository userRepository;
 
 	
 	@PostMapping(path = "/save")
-	public void save( @RequestBody Employee data) {
-		 
+	public String save( @RequestBody Employee data) {
+		 System.out.println(data.getBirthday());
 			 
 			 
 			Employee save = userRepository.save(data);
 		 
 		System.out.println("save called "+save);
-		//return data;
+		 return "  data";
 	}
 @PostMapping("/employee")
 public List<Employee> getAllEmployees(@RequestBody String data){

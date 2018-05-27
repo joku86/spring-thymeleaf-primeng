@@ -30,113 +30,109 @@
 //			]
 //	 })
 //});
-$(function ()  
-{  
-    var x = "Self-Invoking Function";
-    let d="df";
-    
-    console.log(x+ d);
-}); 
+$(function() {
+	var x = "Self-Invoking Function";
+	let
+	d = "df";
+
+	console.log(x + d);
+});
 $(function() {
 	console.log("ddddd");
-//	 MyFunctions = {  
-//		        Sum: function (x, y)  
-//		        {  
-//		            return x + y;  
-//		        },  
-//		        Sub: function (x, y)  
-//		        {  
-//		            return x - y;  
-//		        },  
-//		        Div: function (x, y)  
-//		        {  
-//		            return x / y;  
-//		        },  
-//		        Mul: function (x, y)  
-//		        {  
-//		            return x * y;  
-//		        }  
-//		    }  
-//		    var a = 20;  
-//		    var b = 10;  
-//		    alert("Value is 20 and 10 \n" + "Sum of Both value is is= " + MyFunctions.Sum(a, b) + "\n Subtraction of Both value is is= " + MyFunctions.Sub(a, b) + "\n Multiplication of Both value is is= " + MyFunctions.Mul(a, b) + "\n Divison of Both value is is= " + MyFunctions.Div(a, b))  
-
+	// MyFunctions = {
+	// Sum: function (x, y)
+	// {
+	// return x + y;
+	// },
+	// Sub: function (x, y)
+	// {
+	// return x - y;
+	// },
+	// Div: function (x, y)
+	// {
+	// return x / y;
+	// },
+	// Mul: function (x, y)
+	// {
+	// return x * y;
+	// }
+	// }
+	// var a = 20;
+	// var b = 10;
+	// alert("Value is 20 and 10 \n" + "Sum of Both value is is= " +
+	// MyFunctions.Sum(a, b) + "\n Subtraction of Both value is is= " +
+	// MyFunctions.Sub(a, b) + "\n Multiplication of Both value is is= " +
+	// MyFunctions.Mul(a, b) + "\n Divison of Both value is is= " +
+	// MyFunctions.Div(a, b))
  
+	$('#default').puigrowl();
+	$('#tbl ').puidatatable(
+			{
+
+				lazy : true,
+				caption : 'Editable Cells',
+				editMode : 'cell',
+				paginator : {
+					rows : 10,
+					totalRecords : totalArticles,
+				},
+				columns : [ {
+					field : 'name',
+					headerText : 'Vin',
+					editor : 'input'
+				}, {
+					field : 'vorname',
+					headerText : 'Brand',
+					editor : 'input'
+				}, {
+					field : 'birthday',
+					headerText : 'Year',
+					editor : 'input'
+				}, {
+					field : 'id',
+					headerText : 'Color',
+					editor : 'input'
+				} ],
+				datasource : function(callback) {
+
+					$.ajax({
+						data : '{"command":"on"}',
+
+						type : "POST",
+						url : 'employee',
+						dataType : "json",
+						context : this,
+						success : function(response) {
+							callback.call(this, response);
+						}
+					});
+				},
+				cellEdit : function(event, ui) {
+					event.preventDefault();
+					event.stopPropagation();
+					if (ui.oldValue != ui.newValue) {
+						ui.data[ui.field]=ui.newValue;
+						SendAjaxJsonRequest(event, ui.data,function(result){
+			            	console.log("fehler "+result);
+			            	ui.data[ui.field]=ui.oldValue;
+			            	return false;
+			            });
+						console.log("gesendet " + ui);
+						$('#default').puigrowl(
+								'show',
+								[ {
+									severity : 'info',
+									summary : 'Cell Edit',
+									detail : 'Old Value: ' + ui.oldValue
+											+ ', New Value: ' + ui.newValue
+											+ ' for ' + ui.field
+								} ]);
+
+					}
+					
+				}
+			});
  
-        var localData = [
-            {'brand': 'Volkswagen', 'year': 2012, 'color': 'White', 'vin': 'dsad231ff'},
-            {'brand': 'Audi', 'year': 2011, 'color': 'Black', 'vin': 'gwregre345'},
-            {'brand': 'Renault', 'year': 2005, 'color': 'Gray', 'vin': 'h354htr'},
-            {'brand': 'BMW', 'year': 2003, 'color': 'Blue', 'vin': 'j6w54qgh'},
-            {'brand': 'Mercedes', 'year': 1995, 'color': 'White', 'vin': 'hrtwy34'},
-            {'brand': 'Volvo', 'year': 2005, 'color': 'Black', 'vin': 'jejtyj'},
-            {'brand': 'Honda', 'year': 2012, 'color': 'Yellow', 'vin': 'g43gr'},
-            {'brand': 'Jaguar', 'year': 2013, 'color': 'White', 'vin': 'greg34'},
-            {'brand': 'Ford', 'year': 2000, 'color': 'Black', 'vin': 'h54hw5'},
-            {'brand': 'Fiat', 'year': 2013, 'color': 'Red', 'vin': '245t2s'}
-        ];
-         
-        $('#tbl ').puidatatable({
-        	
-        	 lazy: true,
-            caption: 'Editable Cells',
-            editMode: 'cell',
-            paginator: {
-                rows: 10,
-                totalRecords: totalArticles ,
-            },
-            columns: [
-                {field: 'name', headerText: 'Vin', editor: 'input'},
-                {field: 'vorname', headerText: 'Brand', editor: 'input'},
-                {field: 'birthday', headerText: 'Year', editor: 'input'},
-                {field: 'id', headerText: 'Color', editor: 'input'}
-            ],
-          datasource: function(callback) {
-        	  
-          $.ajax({
-      		data: '{"command":"on"}',
-          
-              type: "POST",
-              url: 'employee',
-              dataType: "json",
-              context: this,
-              success: function(response) {
-                  callback.call(this, response);
-              }
-          });
-      },
-      cellEdit:  function(event, ui) {
-      	  if(ui.oldValue!=ui.newValue)
-          	  SendAjaxJsonRequest(event,ui.data);
-          	  console.log("gesendet "+ui);
-                $('#default').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
-            }
-        });
-       var mein= 
-        function(event, ui) {
-      	  if(ui.oldValue!=ui.newValue)
-      	  SendAjaxJsonRequest();
-      	  console.log(event+"succes ");
-            $('#default').puigrowl('show', [{severity: 'info', summary: 'Cell Edit', detail: 'Old Value: ' + ui.oldValue + ', New Value: ' + ui.newValue + ' for ' + ui.field}]);
-        }
 
-        $('#default').puigrowl();
-        function daten(){
-        	 
-        	$.ajax({
-        		
-
-                type: "GET",
-                url: 'save',
-                dataType: "json",
-                context: this,
-              
-            }).done(function(msg) {
-            	console.log("dome "+msg);
-                
-            });
-        } 
-            
-       
+	 
 });
-         
