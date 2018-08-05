@@ -64,7 +64,7 @@ $(function() {
 	// MyFunctions.Sub(a, b) + "\n Multiplication of Both value is is= " +
 	// MyFunctions.Mul(a, b) + "\n Divison of Both value is is= " +
 	// MyFunctions.Div(a, b))
- 
+
 	$('#default').puigrowl();
 	$('#tbl ').puidatatable(
 			{
@@ -111,17 +111,17 @@ $(function() {
 					event.preventDefault();
 					event.stopPropagation();
 					if (ui.oldValue != ui.newValue) {
-						ui.data[ui.field]=ui.newValue;
-						SendAjaxJsonRequest(event, ui.data,function(result){
-			            	console.log("fehler "+result);
-			            	ui.data[ui.field]=ui.oldValue;
-			            	return false;
-			            });
+						ui.data[ui.field] = ui.newValue;
+						SendAjaxJsonRequest(event, ui.data, function(result) {
+							console.log("fehler " + result);
+							ui.data[ui.field] = ui.oldValue;
+							return false;
+						});
 						console.log("gesendet " + ui);
 						$('#default').puigrowl(
 								'show',
 								[ {
-									severity : 'info',
+									severity : 'error',
 									summary : 'Cell Edit',
 									detail : 'Old Value: ' + ui.oldValue
 											+ ', New Value: ' + ui.newValue
@@ -129,10 +129,8 @@ $(function() {
 								} ]);
 
 					}
-					
+
 				}
 			});
- 
 
-	 
 });
