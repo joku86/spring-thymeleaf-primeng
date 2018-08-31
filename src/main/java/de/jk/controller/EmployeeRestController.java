@@ -1,7 +1,11 @@
 package de.jk.controller;
 
 import java.io.UnsupportedEncodingException;
-import java.net.*;
+import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedHashMap;
@@ -28,7 +32,6 @@ import org.springframework.web.client.RestTemplate;
 
 import de.jk.model.Employee;
 import de.jk.model.UserRepository;
-import org.thymeleaf.dialect.AbstractXHTMLEnabledDialect;
 
 @RestController
 public class EmployeeRestController {
@@ -144,25 +147,25 @@ public class EmployeeRestController {
 	@PostMapping("/employee")
 	public Iterable<Employee> getAllEmployees(@RequestBody String data) throws UnknownHostException {
 		System.out.println(data);
-		return userRepository.findAll();
-//		List<Employee> t = new ArrayList<>();
-//		try {
-//			InetAddress inet = InetAddress.getLocalHost();
-//			InetAddress[] ips = InetAddress.getAllByName(inet.getCanonicalHostName());
-//			String s = "";
-//			if (ips != null) {
-//				for (int i = 0; i < ips.length; i++) {
-//					s += ips[i] + "  ";
-//				}
-//			}
-//			for (int i = 0; i < 400; i++) {
-//				t.add(new Employee("ich " + i + "  " + s, i + "test", new Date(), "ii"));
-//			}
-//		} catch (UnknownHostException e) {
-//
-//		}
-//
-//		return t;
+		//return userRepository.findAll();
+		List<Employee> t = new ArrayList<>();
+		try {
+			InetAddress inet = InetAddress.getLocalHost();
+			InetAddress[] ips = InetAddress.getAllByName(inet.getCanonicalHostName());
+			String s = "";
+			if (ips != null) {
+				for (int i = 0; i < ips.length; i++) {
+					s += ips[i] + "  ";
+				}
+			}
+			for (int i = 0; i < 400; i++) {
+				t.add(new Employee("ich " + i + "  " + s, i + "test", new Date(), "ii"));
+			}
+		} catch (UnknownHostException e) {
+
+		}
+
+		return t;
 
 	}
 }

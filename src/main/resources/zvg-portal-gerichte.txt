@@ -1,0 +1,99 @@
+﻿<countryCourts>
+<country_abbreviations size="1" name="country_abbreviations" onchange="updateAmtsgericht(this.value);" style="width:643px">
+<option value="bw">Baden-Wuerttemberg</option>
+<option value="by">Bayern</option>
+<option value="be">Berlin</option>
+<option value="br">Brandenburg</option>
+<option value="hb">Bremen</option>
+<option value="hh">Hamburg</option>
+<option value="he">Hessen</option>
+<option value="mv">Mecklenburg-Vorpommern</option>
+<option value="ni">Niedersachsen</option>
+<option value="nw">Nordrhein-Westfalen</option>
+<option value="rp">Rheinland-Pfalz</option>
+<option value="sl">Saarland</option>
+<option value="sn">Sachsen</option>
+<option value="st">Sachsen-Anhalt</option>
+<option value="sh">Schleswig-Holstein</option>
+<option value="th">Thüringen</option>
+</country_abbreviations>
+
+<court>
+<bl_abbr id="bw">
+<select size="1" name="ger_id" style="width:643px"> 
+<option value="B2402">Biberach</option><option value="B2701">Calw</option><option value="B2103">Crailsheim</option><option value="B1405">Karlsruhe</option><option value="B1802">Kehl</option><option value="B1803">Lahr</option><option value="B1601">Mannheim</option><option value="B1805">Offenburg</option><option value="B2404">Ravensburg</option><option value="B1806">Wolfach</option><option value="B2705">Reutlingen</option><option value="B2308">Schwäbisch Hall</option><option value="B2407">Tettnang</option><option value="B2506">Tuttlingen</option></select>
+</bl_abbr>
+<bl_abbr id="by">
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="D3101">Amberg</option><option value="D3201">Ansbach</option><option value="D4102">Aschaffenburg</option><option value="D2102">Augsburg</option><option value="D4201">Bamberg</option><option value="D4301">Bayreuth</option><option value="D4401">Coburg</option><option value="D2201">Deggendorf</option><option value="D3304">Fürth</option><option value="D4501">Hof</option><option value="D5701">Ingolstadt</option><option value="D2303">Kaufbeuren</option><option value="D2304">Kempten (Allgäu)</option><option value="D2404">Landshut</option><option value="D2505">Memmingen</option><option value="D2601">München</option><option value="D2507">Neu-Ulm</option><option value="D2108">Nördlingen</option><option value="D3310">Nürnberg</option><option value="D2803">Passau</option><option value="D3410">Regensburg</option><option value="D2909">Rosenheim</option><option value="D4608">Schweinfurt</option><option value="D3413">Straubing</option><option value="D2910">Traunstein</option><option value="D3508">Weiden i.d.Opf.</option><option value="D2713">Weilheim i. OB</option><option value="D3208">Weißenburg</option><option value="D2714">Wolfratshausen</option><option value="D4708">Würzburg</option></select>
+
+</bl_abbr>
+<bl_abbr id="be">
+
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="F1103">Charlottenburg</option><option value="F1110">Köpenick</option><option value="F1111">Lichtenberg</option><option value="F1112">Mitte</option><option value="F1109">Neukölln</option><option value="F1105">Pankow / Weißensee</option><option value="F1106">Schöneberg</option><option value="F1104">Spandau</option><option value="F1108">Tempelhof-Kreuzberg</option><option value="F1101">Tiergarten</option><option value="F1102">Wedding</option></select>
+</bl_abbr>
+
+</ id="br" bl_abbr>
+
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="G1101">Bad Liebenwerda</option><option value="G1103">Cottbus</option><option value="G1107">Cottbus Zweigstelle Guben</option><option value="G1207">Frankfurt (Oder)</option><option value="G1305">Königs Wusterhausen</option><option value="G1307">Luckenwalde</option><option value="G1110">Lübben</option><option value="G1309">Neuruppin</option><option value="G1312">Potsdam</option><option value="G1111">Senftenberg</option><option value="G1212">Strausberg</option></select>
+</bl_abbr>
+
+< id="hb" bl_abbr>
+
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="H1101">Bremen</option><option value="H1103">Bremen-Blumenthal</option><option value="H1102">Bremerhaven</option></select>
+
+</bl_abbr>
+< id="he" bl_abbr>
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="M1401">Alsfeld</option><option value="M1305">Bad Hersfeld</option><option value="M1202">Bad Homburg v. d. Höhe</option><option value="M1905">Bad Schwalbach</option><option value="M1102">Bensheim</option><option value="M1801">Biedenkopf</option><option value="M1402">Büdingen</option><option value="M1103">Darmstadt</option><option value="M1104">Dieburg</option><option value="M1702">Dillenburg</option><option value="M1705">Dillenburg Zweigstelle Herborn</option><option value="M1602">Eschwege</option><option value="M1803">Frankenberg (Eder)</option><option value="M1201">Frankfurt am Main</option><option value="M1405">Friedberg (Hessen)</option><option value="M1603">Fritzlar</option><option value="M1105">Fürth</option><option value="M1301">Fulda</option><option value="M1501">Gelnhausen</option><option value="M1406">Gießen</option><option value="M1106">Groß-Gerau</option><option value="M1502">Hanau</option><option value="M1307">Hünfeld</option><option value="M1903">Idstein</option><option value="M1607">Kassel</option><option value="M1605">Kassel Zweigstelle Hofgeismar</option><option value="M1807">Kirchhain</option><option value="M1203">Königstein im Taunus</option><option value="M1608">Korbach</option><option value="M1111">Lampertheim</option><option value="M1112">Langen (Hessen)</option><option value="M1706">Limburg a. d. Lahn</option><option value="M1809">Marburg</option><option value="M1609">Melsungen</option><option value="M1113">Michelstadt</option><option value="M1114">Offenbach am Main</option><option value="M1904">Rüdesheim am Rhein</option><option value="M1107">Rüsselsheim</option><option value="M1812">Schwalmstadt</option><option value="M1117">Seligenstadt</option><option value="M1709">Weilburg</option><option value="M1710">Wetzlar</option><option value="M1906">Wiesbaden</option></select>
+</bl_abbr>
+
+< id="ni" bl_abbr>
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="P2701">Achim</option><option value="P2401">Alfeld</option><option value="P3101">Aurich</option><option value="P1101">Bad Gandersheim</option><option value="P3307">Bad Iburg</option><option value="P3302">Bersenbrück</option><option value="P3201">Brake</option><option value="P1103">Braunschweig</option><option value="P2601">Bremervörde</option><option value="P2101">Bückeburg</option><option value="P2403">Burgdorf</option><option value="P2303">Burgwedel</option><option value="P2602">Buxtehude</option><option value="P2503">Celle</option><option value="P1116">Clausthal-Zellerfeld</option><option value="P3202">Cloppenburg</option><option value="P2603">Cuxhaven</option><option value="P2504">Dannenberg</option><option value="P3204">Delmenhorst</option><option value="P2705">Diepholz</option><option value="P1202">Duderstadt</option><option value="P1203">Einbeck</option><option value="P2404">Elze</option><option value="P3102">Emden</option><option value="P2608">Geestland</option><option value="P2407">Gifhorn</option><option value="P1204">Göttingen</option><option value="P1104">Goslar</option><option value="P2304">Hameln</option><option value="P1205">Hann.-Münden</option><option value="P2305">Hannover</option><option value="P1105">Helmstedt</option><option value="P1206">Herzberg am Harz</option><option value="P2408">Hildesheim</option><option value="P2409">Holzminden</option><option value="P3207">Jever</option><option value="P3104">Leer</option><option value="P2410">Lehrte</option><option value="P3308">Lingen</option><option value="P2507">Lüneburg</option><option value="P3310">Meppen</option><option value="P2306">Neustadt</option><option value="P2708">Nienburg</option><option value="P3105">Norden</option><option value="P3209">Nordenham</option><option value="P3312">Nordhorn</option><option value="P1208">Northeim</option><option value="P3210">Oldenburg</option><option value="P3313">Osnabrück</option><option value="P2709">Osterholz-Scharmbeck</option><option value="P1209">Osterode am Harz</option><option value="P2611">Otterndorf</option><option value="P3314">Papenburg</option><option value="P2411">Peine</option><option value="P2104">Rinteln</option><option value="P2710">Rotenburg (Wümme)</option><option value="P1108">Salzgitter</option><option value="P1111">Seesen</option><option value="P2509">Soltau</option><option value="P2307">Springe</option><option value="P2612">Stade</option><option value="P2106">Stadthagen</option><option value="P2711">Stolzenau</option><option value="P2712">Sulingen</option><option value="P2713">Syke</option><option value="P2613">Tostedt</option><option value="P2510">Uelzen </option><option value="P3211">Varel</option><option value="P3212">Vechta</option><option value="P2715">Verden</option><option value="P2716">Walsrode</option><option value="P2308">Wennigsen</option><option value="P3213">Westerstede</option><option value="P3214">Wildeshausen</option><option value="P3215">Wilhelmshaven</option><option value="P2511">Winsen (Luhe)</option><option value="P3107">Wittmund</option><option value="P1115">Wolfenbüttel</option><option value="P2413">Wolfsburg</option><option value="P2614">Zeven</option></select>
+</bl_abbr>
+
+</bl_abbr id="nw">
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="R3101">Aachen</option><option value="R2701">Ahaus</option><option value="R2702">Ahlen</option><option value="R2601">Altena</option><option value="R1901">Arnsberg</option><option value="R2902">Bad Berleburg</option><option value="R2108">Bad Oeynhausen</option><option value="R2703">Beckum</option><option value="R3302">Bergheim</option><option value="R3301">Bergisch Gladbach</option><option value="R2101">Bielefeld</option><option value="R2302">Blomberg</option><option value="R2704">Bocholt</option><option value="R2201">Bochum</option><option value="R3201">Bonn</option><option value="R2705">Borken</option><option value="R2501">Bottrop</option><option value="R2802">Brakel</option><option value="R1904">Brilon</option><option value="R3303">Brühl</option><option value="R2102">Bünde</option><option value="R2401">Castrop-Rauxel</option><option value="R2707">Coesfeld</option><option value="R2303">Detmold</option><option value="R1201">Dinslaken</option><option value="R2502">Dorsten</option><option value="R2402">Dortmund</option><option value="R2708">Dülmen</option><option value="R3103">Düren</option><option value="R1101">Düsseldorf</option><option value="R1202">Duisburg</option><option value="R1502">Erkelenz</option><option value="R3104">Eschweiler</option><option value="R2503">Essen</option><option value="R3203">Euskirchen</option><option value="R3105">Geilenkirchen</option><option value="R1302">Geldern</option><option value="R2507">Gelsenkirchen</option><option value="R2509">Gladbeck</option><option value="R1503">Grevenbroich</option><option value="R2103">Gütersloh</option><option value="R3304">Gummersbach</option><option value="R2602">Hagen</option><option value="R2104">Halle</option><option value="R2404">Hamm</option><option value="R2510">Hattingen</option><option value="R3107">Heinsberg</option><option value="R2105">Herford</option><option value="R2203">Herne</option><option value="R2205">Herne-Wanne (Herne)</option><option value="R2807">Höxter</option><option value="R2711">Ibbenbüren</option><option value="R2604">Iserlohn</option><option value="R3108">Jülich</option><option value="R2405">Kamen</option><option value="R1401">Kempen</option><option value="R3305">Kerpen</option><option value="R1304">Kleve</option><option value="R3306">Köln</option><option value="R3205">Königswinter</option><option value="R1402">Krefeld</option><option value="R1105">Langenfeld</option><option value="R2307">Lemgo</option><option value="R2904">Lennestadt</option><option value="R3311">Leverkusen</option><option value="R2808">Lippstadt</option><option value="R2106">Lübbecke</option><option value="R2605">Lüdenscheid</option><option value="R2712">Lüdinghausen</option><option value="R2406">Lünen</option><option value="R2511">Marl</option><option value="R1907">Medebach</option><option value="R2606">Meinerzhagen</option><option value="R1908">Menden</option><option value="R1909">Meschede</option><option value="R1602">Mettmann</option><option value="R2107">Minden</option><option value="R1504">Mönchengladbach</option><option value="R1505">Mönchengladbach-Rheydt</option><option value="R1305">Moers</option><option value="R3109">Monschau</option><option value="R1205">Mülheim an der Ruhr</option><option value="R2713">Münster</option><option value="R1404">Nettetal</option><option value="R1102">Neuss</option><option value="R1206">Oberhausen</option><option value="R2908">Olpe</option><option value="R2809">Paderborn</option><option value="R2607">Plettenberg</option><option value="R2110">Rahden</option><option value="R1104">Ratingen</option><option value="R2204">Recklinghausen</option><option value="R1603">Remscheid</option><option value="R2113">Rheda-Wiedenbrück</option><option value="R3207">Rheinbach</option><option value="R1306">Rheinberg</option><option value="R2715">Rheine</option><option value="R3106">Schleiden</option><option value="R2608">Schwelm</option><option value="R2609">Schwerte</option><option value="R3208">Siegburg</option><option value="R2909">Siegen</option><option value="R1911">Soest</option><option value="R1605">Solingen</option><option value="R2706">Steinfurt</option><option value="R2716">Tecklenburg</option><option value="R2407">Unna</option><option value="R1606">Velbert</option><option value="R1506">Viersen</option><option value="R3209">Waldbröl</option><option value="R2813">Warburg</option><option value="R2718">Warendorf</option><option value="R1912">Warstein</option><option value="R1913">Werl</option><option value="R1208">Wesel</option><option value="R3309">Wipperfürth</option><option value="R2207">Witten</option><option value="R1608">Wuppertal</option></select>
+</bl_abbr>
+<bl_abbr id="sl">
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="V1102">Homburg</option><option value="V1103">Lebach</option><option value="V1104">Merzig</option><option value="V1105">Neunkirchen</option><option value="V1107">Ottweiler</option><option value="V1109">Saarbrücken</option><option value="V1110">Saarlouis</option><option value="V1111">St. Ingbert</option><option value="V1112">St. Wendel</option><option value="V1115">Völklingen</option></select>
+</bl_abbr>
+
+<bl_abbr id="sn">
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="U1101">Bautzen</option><option value="U1206">Chemnitz</option><option value="U1104">Dresden</option><option value="U1107">Görlitz</option><option value="U1308">Leipzig</option><option value="U1222">Zwickau</option></select>
+</bl_abbr>
+
+<bl_abbr id="st">
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="W1101">Aschersleben</option><option value="W1102">Bernburg</option><option value="W1103">Bitterfeld-Wolfen</option><option value="W1201">Burg</option><option value="W1104">Dessau-Roßlau</option><option value="W1105">Eisleben</option><option value="W1202">Gardelegen</option><option value="W1204">Halberstadt</option><option value="W1205">Haldensleben</option><option value="W1109">Halle (Saale)</option><option value="W1113">Köthen</option><option value="W1209">Magdeburg</option><option value="W1114">Merseburg</option><option value="W1115">Naumburg</option><option value="W1210">Oschersleben</option><option value="W1117">Quedlinburg</option><option value="W1212">Salzwedel</option><option value="W1120">Sangerhausen</option><option value="W1213">Schönebeck</option><option value="W1215">Stendal</option><option value="W1121">Weißenfels</option><option value="W1218">Wernigerode</option><option value="W1122">Wittenberg</option><option value="W1123">Zeitz</option><option value="W1220">Zerbst</option></select>
+</bl_abbr>
+
+<bl_abbr id="sh">
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="X1312">Elmshorn</option><option value="X1526">Norderstedt</option></select>
+</bl_abbr>
+
+<bl_abbr id="tn">
+<select size="1" name="ger_id" style="width:643px">
+ 
+<option value="Y1201">Altenburg</option><option value="Y1102">Arnstadt</option><option value="Y1105">Eisenach</option><option value="Y1106">Erfurt</option><option value="Y1203">Gera</option><option value="Y1108">Gotha</option><option value="Y1206">Jena</option><option value="Y1304">Meiningen</option><option value="Y1110">Mühlhausen</option><option value="Y1111">Nordhausen</option><option value="Y1210">Rudolstadt</option><option value="Y1307">Sonneberg</option><option value="Y1308">Suhl</option><option value="Y1114">Weimar</option></select></bl_abbr>
+</court>
+</countryCourts>
