@@ -12,5 +12,6 @@ public class ApplicationTests {
     @Test
     public void dummy() {
         System.out.println("saf sfsafs");
+        
     }
 }
